@@ -45,9 +45,9 @@ class Mailgun {
 	 */
 	protected function post($url, array $params) {
 		$ch = curl_init(); 
-        curl_setopt($ch, CURLOPT_POST, true); 
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params)); 
-        curl_setopt($ch, CURLOPT_HEADER, false); 
+		curl_setopt($ch, CURLOPT_POST, true); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params)); 
+		curl_setopt($ch, CURLOPT_HEADER, false); 
 		curl_setopt($ch, CURLOPT_URL, 
 			sprintf('https://api.mailgun.net/v2/%s/%s', $this->domain, $url));
 		curl_setopt($ch, CURLOPT_MAXREDIRS, 3);
