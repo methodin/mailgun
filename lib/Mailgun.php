@@ -1,5 +1,4 @@
 <?php
-namespace Methodin;
 /* 
  * Simple Mailgun integration
  */
