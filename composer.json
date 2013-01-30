@@ -1,3 +1,7 @@
 {
-	"name":"methodin/mailgun"
+	"name":"methodin/mailgun",
+	"type":"library",
+	"autoload": {
+		"psr-0": { "Mailgun": "lib/" }
+	}
 }
