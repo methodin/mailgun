@@ -28,12 +28,13 @@ class Mailgun {
 	 * @param string $subject The email subject
 	 * @param string $body The content of the email
 	 */
-	public function sendMessage(array $to, $from, $subject, $body) {
+	public function sendMessage(array $to, $from, $subject, $body, $html='') {
 		$this->post('messages', array(
 			'to'		=> $to,
 			'from'		=> $from,
 			'subject'	=> $subject,
-			'text'		=> $body
+			'text'		=> $body,
+			'html'		=> $html
 		));
 	}
 
